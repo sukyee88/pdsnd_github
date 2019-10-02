@@ -208,7 +208,7 @@ def main():
         n=0
         df_raw = display_raw_data(city)
         raw_data = input("Would you like to view individual data? 'yes' or 'no'\n")
-        while n < df.shape[0] and raw_data =="yes":
+        while n < df.shape[0] and raw_data.lower() =="yes":
             print(df_raw.iloc[n:n+5])
             raw_data = input("Would you like to view individual data? 'yes' or 'no'\n")
             n+=5
