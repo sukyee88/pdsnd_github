@@ -207,10 +207,10 @@ def main():
         user_stats(df)
         n=0
         df_raw = display_raw_data(city)
-        raw_data = input("Would you like to view individual data? 'yes' or 'no'")
-        while n < df.shape[0] and raw_data =="yes":
+        raw_data = input("Would you like to view individual data? 'yes' or 'no'\n")
+        while n < df.shape[0] and raw_data.lower() =="yes":
             print(df_raw.iloc[n:n+5])
-            raw_data = input("Would you like to view individual data? 'yes' or 'no'")
+            raw_data = input("Would you like to view individual data? 'yes' or 'no'\n")
             n+=5
         else:
             restart = input('\nWould you like to restart? Enter yes or no.\n')
